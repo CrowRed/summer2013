@@ -1,0 +1,76 @@
+body {
+    background-color: #66a9bc;
+}
+
+@keyframes colorchange {
+	0%   { color: #c0b2d9; }
+	50%  { color: red; }
+	100% { color: #c0b2d9; }
+	}
+	
+@-webkit-keyframes colorchange {
+	from { color: #c0b2d9; }
+	to   { color: red; }
+	}
+
+#content {
+	border: 1px solid #c3b2d9;
+    background-color: #58437a;
+    padding: 5px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+h1 {
+    font-family: helvetica;
+    color: #66a9bc;
+    font-size: 23px;
+}
+h2 {
+    font-family: helvetica;
+    color: #66a9bc;
+    font-size: 18px;
+}
+p {
+    font-family: lucida sans;
+    text-indent: 25px;
+    color: #c0b2d9;
+}
+.done {
+	text-decoration: line-through;
+}
+
+ol {
+	font-family: lucida sans;
+    text-indent: 25px;
+    color: #c0b2d9;
+}
+
+.progress {
+	animation: colorchange 1s ease infinite;
+	-webkit-animation: colorchange 1s ease infinite;
+}
+
+#container {
+	border: 1px solid #cc5fcd; 
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	height: 30px;
+	width: 95%;
+	background-color: #c0b2d9;
+	margin: 20px;
+	padding: 5px;
+}
+
+#check {
+	height: 27px;
+	margin-right: 4px;
+	border: 1px dotted #0a85b9;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	animation: stretch 4s;
+	-webkit-animation: stretch 4s;
+	background-image: url('../style/bgd.png');
+}
