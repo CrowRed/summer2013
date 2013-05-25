@@ -1,0 +1,28 @@
+h1 {
+    font-family: helvetica;
+    color: #66a9bc;
+    font-size: 28px;
+}
+h2 {
+    font-family: helvetica;
+    color: #66a9bc;
+    font-size: 18px;
+}
+p {
+    font-family: lucida sans;
+    text-indent: 25px;
+    color: #c0b2d9;
+}
+.done {
+	text-decoration: line-through;
+}
+
+ul {
+	font-family: lucida sans;
+    text-indent: 25px;
+    color: #c0b2d9;
+}
+.progress {
+	animation: colorchange 1s ease infinite;
+	-webkit-animation: colorchange 1s ease infinite;
+}
