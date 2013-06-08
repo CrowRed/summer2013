@@ -6,7 +6,35 @@
 <link rel="stylesheet" type="text/css" href="style/typography.css" />
 <script src="script/toggleremember.js"></script>
 
-
+<script>
+function calculate() {
+	if (document.getElementById("chooseCalculation").value == "x") {
+		var numberOne = document.getElementById("first").value;
+		var numberTwo = document.getElementById("second").value;
+		var answer = numberOne * numberTwo;
+		document.getElementById("output").value = answer;
+		return answer
+	} else if (document.getElementById("chooseCalculation").value == "/") {
+		var numberOne = document.getElementById("first").value;
+		var numberTwo = document.getElementById("second").value;
+		var answer = numberOne / numberTwo;
+		document.getElementById("output").value = answer;
+		return answer
+	} else if (document.getElementById("chooseCalculation").value == "-") {
+		var numberOne = document.getElementById("first").value;
+		var numberTwo = document.getElementById("second").value;
+		var answer = numberOne - numberTwo;
+		document.getElementById("output").value = answer;
+		return answer
+	} else if (document.getElementById("chooseCalculation").value == "+") {
+		var numberOne = document.getElementById("first").value;
+		var numberTwo = document.getElementById("second").value;
+		var answer = parseInt(numberOne) + parseInt(numberTwo);
+		document.getElementById("output").value = answer;
+		return answer
+	}
+}
+</script>
 
 <style type="text/css">
 	#check { width: 33.3%; }
@@ -20,28 +48,41 @@
 		from { width: 0%; }
 		to   { width: 33.3%; }
 	}
-
 </style>
 </head>
 <body>
-        <div id="content">
+<div id="content">
     <h1>Summer 2013</h1>
+    <h2>Under Construction!</h2>
     <p>Last summer wasn't all that fun... :( That's because I didn't have a list of things that I wanted to complete during my time off. Then I found DIY.org and things changed! I came up with a plan for this summer: To complete as many skills as I really wanted trying to gain real-life skills that I could show off to other people. The link to my DIY page is <a href="https://diy.org/CrowRed" alt="Crow Red">here</a>. Check it out to see all of the neat things that I have been up to this summer! I've already got a head start!</p>
     <p>P.S. Just a fun little fact: I like to design websites all the time! This one is probably my 10th (or something...I lost track a long while ago)! But I can always use the practice!</p>
+    
+    <h2>Calculator!</h2>
+    <input type="text" id="first">
+    <select id="chooseCalculation">
+    	<option value="+">+</option>
+    	<option value="-">-</option>
+    	<option value="x">x</option>
+    	<option value="/">&divide;</option>
+    </select>
+    <input type="text" id="second">
+    <input type="submit" id="submit" value="=" onclick="calculate()">
+    <input type="text" id="output" disabled>
+    
     <h2>Progress Bar:</h2>
     <div id="container">
     	<div id="check"></div>
-    	</div>
-    	<form>
-    	<p id ="A"><input type="checkbox" class="checkbox" onclick="toggle_remember()">GitHub Hosting</p>
-    	<p class="progress"><input type="checkbox" class="checkbox" id="2">Decide on Domains</p>
-            <li><p>Edit my personal page</p></li>
-            <li><p>Learn Javascript</p></li>
-            <li><p>Flash colors with javascript</p></li>
-            <li><p>Make a calculator with javascript</p></li>
-            <li><p>Learn php</p></li>
-            <li><p>Have a login section to this website</p></li>
-    	</font>
-        </div>
+    </div>
+    	<form id="list">
+    		<p><del><input type="checkbox" class="checkbox" onclick="toggle_remember()">GitHub Hosting</del></p>
+    		<p class="progress"><input type="checkbox" class="checkbox" id="2">Decide on Domains</p>
+        	<p><input type="checkbox" class="checkbox" id="2">Edit my personal page</p>
+        	<p><del><input type="checkbox" class="checkbox" id="2">Learn Javascript (for the most part)</del></p>
+        	<p><del><input type="checkbox" class="checkbox" id="2">Flash colors with javascript</del></p>
+        	<p><del><input type="checkbox" class="checkbox" id="2">Make a calculator with javascript</del></p>
+        	<p><input type="checkbox" class="checkbox" id="2">Learn php</p>
+        	<p><input type="checkbox" class="checkbox" id="2">Have a login section to this website</p>
+    	</form>
+</div>
 </body>
 </html>

@@ -26,3 +26,9 @@ ul {
 	animation: colorchange 1s ease infinite;
 	-webkit-animation: colorchange 1s ease infinite;
 }
+del {
+	font-family: lucida sans;
+    text-indent: 25px;
+    color: #c0b2d9;
+	text-decoration: line-through;
+}
